@@ -39,3 +39,137 @@
 
 # debug information files
 *.dwo
+
+
+# ----------
+# Git ignore for: CMake (Ninja), C++20, Visual Studio 2022 on Windows
+# Repository: C:\random\RLwithcpp\cpp-rl
+# ----------
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.sdf
+ipch/
+*.opensdf
+
+# Build outputs and intermediate files (MSVC/clang/gcc)
+*.obj
+*.o
+*.lo
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.app
+*.pdb
+*.ilk
+*.idb
+*.exp
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Testing/
+Makefile
+cmake-*.log
+CMakeFiles/
+build/
+cmake-build-*/
+**/cmake-build-*/
+
+# Ninja
+build.ninja
+*.ninja_deps
+*.ninja_log
+.ninja_* 
+
+# Generated compile_commands (ignore by default; remove if you want to commit it)
+compile_commands.json
+
+# Common folders used as build dirs
+out/
+bin/
+lib/
+dist/
+bld/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+
+# Package managers & dependency caches
+vcpkg_installed/
+vcpkg-export/
+.conan/
+conanbuildinfo.txt
+conaninfo.txt
+build/_deps/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs, reports, coverage
+*.log
+*.trace
+coverage/
+coverage-html/
+lcov-report/
+TestResults/
+*.profdata
+*.gcda
+*.gcno
+*.gcov
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and swap files
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*.backup
+
+# Python artifacts (if used in tooling/scripts)
+__pycache__/
+*.py[cod]
+pip-wheel-metadata/
+*.egg-info/
+
+# Mac / Linux specific
+~$*
+.*.sw?
+
+# Misc / local configuration
+.env
+.env.local
+.local/
+secrets*.json
+*.pem
+*.key
+
+# Optional: ignore third-party or large dependency directories if present
+third_party/
+external/
+vendor/
+
+# End of file
