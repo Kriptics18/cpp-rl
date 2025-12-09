@@ -1,9 +1,5 @@
-#include <torch/torch.h>
-#include <iostream>
+extern int day_2();
 
 int main() {
-    std::cout << "Hello LibTorch!\n";
-    torch::Tensor t = torch::rand({ 2, 3 });
-    std::cout << t << std::endl;
-    return 0;
+    return day_2();
 }
