@@ -10,10 +10,10 @@ struct MLPImpl : torch::nn::Module {
         fc2 = register_module("fc2", torch::nn::Linear(hidden_dim, output_dim));
     }
 
-    torch::Tensor forward(torch::Tensor x) {
-        x = torch::relu(fc1->forward(x));
-        x = fc2->forward(x);
-        return x;
+    torch::Tensor forward(const torch::Tensor& x) {
+        auto out = torch::relu(fc1->forward(x));
+        out = fc2->forward(out);
+        return out;
     }
 };
 TORCH_MODULE(MLP);
