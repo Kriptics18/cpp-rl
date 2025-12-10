@@ -1,5 +1,5 @@
-extern int day_2();
+extern int day_3();
 
 int main() {
-    return day_2();
+    return day_3();
 }
