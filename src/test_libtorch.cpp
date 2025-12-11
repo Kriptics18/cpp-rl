@@ -7,7 +7,7 @@ int main() {
 
     config.use_adam = false;
     config.steps = 150;
-	config.iter = rand() % 1000 + 1000;
+    config.iter = rand() % 1000 + 1000;
 
     return day_4(config);
 }
