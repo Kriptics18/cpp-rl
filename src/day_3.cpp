@@ -2,7 +2,6 @@
 #include "headers/mlp.h"
 #include <iostream>
 #include <fstream>
-#include <math.h>
 
 int day_3() {
 

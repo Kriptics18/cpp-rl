@@ -15,5 +15,23 @@ struct MLPImpl : torch::nn::Module {
         out = fc2->forward(out);
         return out;
     }
+
+    void save(torch::serialize::OutputArchive& archive) const {
+        archive.write("fc1_weight", fc1->weight);
+        archive.write("fc1_bias", fc1->bias);
+
+        archive.write("fc2_weight", fc2->weight);
+        archive.write("fc2_bias", fc2->bias);
+    }
+
+    void load(torch::serialize::InputArchive& archive) {
+        archive.read("fc1_weight", fc1->weight);
+        archive.read("fc1_bias", fc1->bias);
+
+        archive.read("fc2_weight", fc2->weight);
+        archive.read("fc2_bias", fc2->bias);
+    }
+
+
 };
 TORCH_MODULE(MLP);
