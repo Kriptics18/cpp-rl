@@ -1,3 +1,4 @@
+#pragma once
 struct TrainingParamConfig {
     int batch_size = 64;
     int steps = 100;
