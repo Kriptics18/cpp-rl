@@ -1,5 +1,13 @@
-extern int day_2();
+#include "headers/train_config.h"
+#include<torch/torch.h>
+extern int day_4(TrainingParamConfig config);
 
 int main() {
-    return day_2();
+    TrainingParamConfig config;
+
+    config.use_adam = false;
+    config.steps = 150;
+    config.iter = rand() % 1000 + 1000;
+
+    return day_4(config);
 }
