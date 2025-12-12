@@ -10,6 +10,6 @@ set(Torch_DIR "C:/random/RLwithcpp/libtorch-2.9.1+cu130/libtorch/share/cmake/Tor
 
 find_package(Torch REQUIRED)
 
-add_executable(test_libtorch "src/test_libtorch.cpp" "src/day_3.cpp" "src/day_4.cpp")
+add_executable(test_libtorch "src/test_libtorch.cpp" "src/day_5.cpp" "src/headers/stdtraintest.h")
 target_link_libraries(test_libtorch "${TORCH_LIBRARIES}")
 set_property(TARGET test_libtorch PROPERTY CXX_STANDARD 20)
