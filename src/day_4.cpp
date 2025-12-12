@@ -29,6 +29,10 @@ int day_4(TrainingParamConfig config) {
 
 
 	std::ofstream csv("../logs/day_4_output.txt");
+	if (!csv.is_open()) {
+	    std::cerr << "Failed to open ../logs/day_4_output.txt for writing." << std::endl;
+	    return 1;
+	}
 	csv << "iter, loss\n";
 
     std::unique_ptr<torch::optim::Optimizer> optimizer;

@@ -20,6 +20,10 @@ int day_3() {
 	torch::optim::Adam optimizer(net->parameters(), torch::optim::AdamOptions(0.001));
 
 	std::ofstream csv("day_3_output.txt");
+	if (!csv.is_open()) {
+	    std::cerr << "Failed to open output file: day_3_output.txt" << std::endl;
+	    return 1;
+	}
 	csv << "iter, loss\n";
 
 	const int num_iterations = rand() % 1000 + 1000;
